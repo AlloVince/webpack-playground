@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   entry: './src/index.jsx',
@@ -24,18 +25,13 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          { loader: 'style-loader' },
+          // { loader: 'raw-loader' },
           { loader: 'css-loader' }
         ],
-        // exclude: /node_modules/
-      },
-      {
-        test: /\.less$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'less-loader' },
-        ]
+        // include: [
+        //   path.resolve(__dirname, 'node_modules/highlight.js/styles/')
+        // ],
+        // exclude: /node_modules/,
       }
     ]
   },
