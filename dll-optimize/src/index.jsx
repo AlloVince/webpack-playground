@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Form, Select, InputNumber, DatePicker, Switch, Slider, Button } from 'antd';
-import vender from "./vendor.less";
+import "./vendor.less";
 import "./custom.css";
 
-console.log(vender)
 const FormItem = Form.Item;
 const Option = Select.Option;
 
